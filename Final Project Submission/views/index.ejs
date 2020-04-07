@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+  <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <title>Simple Chat App</title>
+</head>
+
+<body>
+  <header>
+    <h1>Super Chat</h1>
+  </header>
+
+  <section>
+    <div id="change_username">
+      <input id="username" type="text" placeholder="Enter user name" />
+      <select id="room" required>
+        <option value="" hidden>Select Chat room</option>
+        <option value="Games">Games</option>
+      </select>
+      <button id="send_username" type="button">Register to Chat</button>
+      <button id="getChats" type="button">Get Chat History</button>
+      <button id="getChatsByChatRoom" type="button">Get Chats By Chat Room</button>
+      <button id="getEvents" type="button">Get User History</button>
+    </div>
+  </section>
+
+  <section id="chatroom">
+    <section id="feedback"></section>
+  </section>
+
+
+
+  <section id="input_zone">
+    <input id="message" class="vertical-align" type="text" />
+    <button id="send_message" class="vertical-align" type="button">Send</button>
+  </section>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/chat.js"></script>
+</body>
+
+</html>
